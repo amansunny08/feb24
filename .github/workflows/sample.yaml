@@ -18,7 +18,8 @@ jobs:
           run: |
              print("Hello world1")
              print("Hello world2")
-        - name: run shell script
-          uses: ./.github/workflows/job1.yaml
+
+   second_job: 
+     uses: ./.github/workflows/job1.yaml
 
           
