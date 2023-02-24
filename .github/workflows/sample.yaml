@@ -23,4 +23,8 @@ jobs:
      needs: first-job
      uses: ./.github/workflows/job1.yaml
 
+   third_job:
+       needs: second_job
+       uses: amansunny08/feb24-alpha/.github/workflows/alpha.yaml@main  
+
           
