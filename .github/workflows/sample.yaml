@@ -1,0 +1,12 @@
+name: testing
+on: push
+jobs:
+   first-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: chekout project
+          uses: actions/checkout@v3
+        - name: list files
+          run: ls -lrt
+        - name: run python script
+          run: python abc.py    
