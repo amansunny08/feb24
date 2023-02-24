@@ -26,5 +26,9 @@ jobs:
    remote_job:
        needs: local_job
        uses: amansunny08/feb24-alpha/.github/workflows/alpha.yaml@main  
+       with:
+           color: red
+       secrets:
+           username: aman   
 
           
