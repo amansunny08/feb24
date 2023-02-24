@@ -20,6 +20,7 @@ jobs:
              print("Hello world2")
 
    second_job: 
+     needs: first-job
      uses: ./.github/workflows/job1.yaml
 
           
