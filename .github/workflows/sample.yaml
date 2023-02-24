@@ -10,3 +10,9 @@ jobs:
           run: ls -lrt
         - name: run python script
           run: python abc.py    
+        - name: run python multiple command
+          shell: python
+          run: |
+             print("Hello world1")
+             print("Hello world2")
+          
