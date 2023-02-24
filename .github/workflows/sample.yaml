@@ -6,13 +6,19 @@ jobs:
       steps:
         - name: chekout project
           uses: actions/checkout@v3
+        
         - name: list files
-          run: ls -lrt
+          run: ls -la
+        
         - name: run python script
           run: python abc.py    
+        
         - name: run python multiple command
           shell: python
           run: |
              print("Hello world1")
              print("Hello world2")
+        - name: run shell script
+          uses: ./.github/workflows/job1.py
+
           
