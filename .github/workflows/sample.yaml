@@ -19,11 +19,11 @@ jobs:
              print("Hello world1")
              print("Hello world2")
 
-   second_job: 
+   local_job: 
      needs: first-job
      uses: ./.github/workflows/job1.yaml
 
-   third_job:
+   remote_job:
        needs: second_job
        uses: amansunny08/feb24-alpha/.github/workflows/alpha.yaml@main  
 
