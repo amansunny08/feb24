@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo "Hello $user"
-echo "Hello $name"
+abc = $user
+xyz = $name
+echo "Hello $abc"
+echo "Hello $xyz"
