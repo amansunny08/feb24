@@ -12,9 +12,9 @@ jobs:
           uses: actions/checkout@v3
 
         - name: run shell script
-          run: |
-             echo "Hello $user"
-             echo "Hello $name"
+          run: ./test.sh
+        #      echo "Hello $user"
+        #      echo "Hello $name"
           shell: bash 
 
 #         - name: list files

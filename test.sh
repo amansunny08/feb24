@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo "Hello $USERNAME"
+echo "Hello $user"
+echo "Hello $name"
