@@ -5,13 +5,16 @@ jobs:
       runs-on: ubuntu-latest
       env:
          user: ${{ secrets.USERNAME }}
+         name: sunny
 
       steps:
         - name: chekout project
           uses: actions/checkout@v3
 
         - name: run shell script
-          run: echo "Hello $user"
+          run: |
+             echo "Hello $user"
+             echo "Hello $name"
           shell: bash 
 
 #         - name: list files
