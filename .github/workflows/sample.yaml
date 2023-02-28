@@ -5,7 +5,7 @@ jobs:
       runs-on: ubuntu-latest
       env:
          user: ${{ secrets.USERNAME }}
-         name: sunny_deepika
+         name: sunny_deepika_1234
 
       steps:
         - name: chekout project
