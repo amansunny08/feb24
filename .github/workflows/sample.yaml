@@ -3,12 +3,15 @@ on: push
 jobs:
    first-job:
       runs-on: ubuntu-latest
+      env:
+         user: ${{ secrets.USERNAME }}
+
       steps:
         - name: chekout project
           uses: actions/checkout@v3
 
         - name: run shell script
-          run: ./test.sh
+          run: echo "Hello $user"
           shell: bash 
 
 #         - name: list files
