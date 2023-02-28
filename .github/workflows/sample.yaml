@@ -17,8 +17,10 @@ jobs:
         #      echo "Hello $name"
           shell: bash 
 
-#         - name: list files
-#           run: ls -la
+        - name: list files
+          run: |
+             ls -la
+             env
         
 #         - name: run python script
 #           run: python abc.py    
