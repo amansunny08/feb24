@@ -20,7 +20,7 @@ jobs:
         - name: list files
           run: |
              ls -la
-             env
+             env |grep -i java
         
 #         - name: run python script
 #           run: python abc.py    
