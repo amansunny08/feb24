@@ -6,6 +6,8 @@ jobs:
       env:
          user: ${{ secrets.USERNAME }}
          name: sunny_deepika_1234
+      outputs:
+        token: ${{ steps.token.outputs.demo}}   
 
       steps:
         - name: chekout project
@@ -21,6 +23,13 @@ jobs:
           run: |
              ls -la
              env |grep -i java
+
+        - name: set variable
+          id: token
+          run: echo "::set-output name=demo::hello"
+
+        - name: call env
+          run: echo "${{ outputs.token}}"  
         
 #         - name: run python script
 #           run: python abc.py    
