@@ -40,8 +40,12 @@ jobs:
 #              print("Hello world1")
 #              print("Hello world2")
 
-#    local_job: 
-#     #  needs: first-job
+   local_job: 
+     needs: first-job
+     runs-on: ubuntu-latest
+     steps:
+       - name: call env
+         run: echo ${{ needs.first-job.outputs.token }}  
 #      uses: ./.github/workflows/job1.yaml
 
 #    remote_job:
