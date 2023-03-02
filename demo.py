@@ -16,12 +16,13 @@ data={
 # print(y)
 # print(type(y))
 
-f=open('abc', mode='r')
-data=json.load(f)
+# f=open('abc', mode='r')
+with open('abc', mode='r') as f:
+   data=json.load(f)
 # print(data)
 # print(type(data))
 
 # print(data.values(['Age']))
 #     print(i)
-print (data.get('Age'))
-f.close()
+   print(data.get('Age'))
+# f.close()
