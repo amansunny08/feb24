@@ -13,6 +13,7 @@ jobs:
         id: abc
         run: |
            abc=$(python demo.py)
+           echo $abc
            echo "data=$abc" >> "$GITHUB_OUTPUT" 
 
       - name: output result
