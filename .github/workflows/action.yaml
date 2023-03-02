@@ -6,7 +6,7 @@ jobs:
     outputs:
     #   output1: ${{ steps.step1.outputs.test }}
     #   output2: ${{ steps.step2.outputs.test }}
-        output1: ${{ steps.abc.outputs.data}}
+        # output1: ${{ steps.abc.outputs.data}}
     steps:
       - name: checkout
         uses: actions/checkout@v3
