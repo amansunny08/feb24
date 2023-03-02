@@ -3,9 +3,10 @@ on: push
 jobs:
   job1:
     runs-on: ubuntu-latest
-    # outputs:
+    outputs:
     #   output1: ${{ steps.step1.outputs.test }}
     #   output2: ${{ steps.step2.outputs.test }}
+        output1: ${{ steps.abc.outputs.data}}
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -13,14 +14,14 @@ jobs:
         id: abc
         run: |
            abc=$(python demo.py)
-           echo $abc
-           export VALUE=$abc
-          #  echo "data=$abc" >> "$GITHUB_OUTPUT" 
+           #  echo $abc
+           #  export VALUE=$abc
+           echo "data=$abc" >> "$GITHUB_OUTPUT" 
 
       - name: output result
         run: |
-           echo $VALUE 
-         # ${{ steps.abc.outputs.data}}
+          #  echo $VALUE 
+          echo "${{ steps.abc.outputs.data}}""
 
   #     - id: step1
   #       run: echo "test=hello" >> "$GITHUB_OUTPUT"
