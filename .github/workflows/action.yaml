@@ -20,7 +20,7 @@ jobs:
 
       - name: output result
         run: |
-          #  echo $VALUE 
+          
           echo "${{ steps.abc.outputs.data}}""
 
   #     - id: step1
