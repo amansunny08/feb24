@@ -13,11 +13,13 @@ jobs:
         id: abc
         run: |
            abc=$(python demo.py)
-           echo $abc
-           echo "data=$abc" >> "$GITHUB_OUTPUT" 
+           export VALUE=$abc
+          #  echo "data=$abc" >> "$GITHUB_OUTPUT" 
 
       - name: output result
-        run: ${{ steps.abc.outputs.data}}
+        run: |
+           echo $VALUE 
+         # ${{ steps.abc.outputs.data}}
 
   #     - id: step1
   #       run: echo "test=hello" >> "$GITHUB_OUTPUT"
