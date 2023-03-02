@@ -21,7 +21,7 @@ jobs:
       - name: output result
         run: |
           
-          echo "${{ steps.abc.outputs.data}}""
+          echo "${{ steps.abc.outputs.data}}"
 
   #     - id: step1
   #       run: echo "test=hello" >> "$GITHUB_OUTPUT"
